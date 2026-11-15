@@ -1,0 +1,7 @@
+set(DMOD_MODULE_NAME lora)
+set(DMOD_MODULE_VERSION ${PROJECT_VERSION})
+set(DMOD_AUTHOR_NAME "Patryk Kubiak")
+set(DMOD_STACK_SIZE 4096)
+set(DMOD_DMR_PATH ${CMAKE_CURRENT_SOURCE_DIR}/lora.dmr)
+dmod_add_executable(lora ${DMOD_MODULE_VERSION} lora.c)
+dmod_link_modules(lora dmdrvi)
